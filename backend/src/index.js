@@ -28,7 +28,7 @@ function createApp() {
     legacyHeaders: false,
     message: { error: 'Too many requests, please try again later.' }
   });
-  app.use('/api/', limiter);
+  app.use(limiter);
 
   // Body parsing
   app.use(express.json({ limit: '10mb' }));
